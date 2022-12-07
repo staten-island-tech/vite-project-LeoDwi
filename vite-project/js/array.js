@@ -1,0 +1,58 @@
+const menu = [
+  {
+    itemName: "Burger",
+    inStock: "False",
+    price: "$6.99",
+    vegetarian: "False",
+    image: "",
+  },
+  {
+    itemName: "Dominic",
+    inStock: "True",
+    price: "$1.99",
+    vegetarian: "False",
+    image: "",
+  },
+  {
+    itemName: "",
+    inStock: "",
+    price: "$",
+    vegetarian: "",
+    image: "",
+  },
+  {
+    itemName: "",
+    inStock: "",
+    price: "$",
+    vegetarian: "",
+    image: "",
+  },
+  {
+    itemName: "",
+    inStock: "",
+    price: "$",
+    vegetarian: "",
+    image: "",
+  },
+  {
+    itemName: "",
+    inStock: "",
+    price: "$",
+    vegetarian: "",
+    image: "",
+  },
+  {
+    itemName: "",
+    inStock: "",
+    price: "$",
+    vegetarian: "",
+    image: "",
+  },
+  {
+    itemName: "",
+    inStock: "",
+    price: "$",
+    vegetarian: "",
+    image: "",
+  },
+];
