@@ -4,6 +4,7 @@ const menu = [
     inStock: "False",
     price: "$6.99",
     vegetarian: "False",
+    wagyu: "False",
     image: "",
   },
   {
@@ -11,6 +12,15 @@ const menu = [
     inStock: "True",
     price: "$1.99",
     vegetarian: "False",
+    wagyu: "True",
+    image: "",
+  },
+  {
+    itemName: "Filet Mignon",
+    inStock: "True",
+    price: "$200",
+    vegetarian: "False",
+    wagyu: "True",
     image: "",
   },
   {
@@ -18,6 +28,7 @@ const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
+    wagyu: "",
     image: "",
   },
   {
@@ -25,6 +36,7 @@ const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
+    wagyu: "",
     image: "",
   },
   {
@@ -32,6 +44,7 @@ const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
+    wagyu: "",
     image: "",
   },
   {
@@ -39,6 +52,7 @@ const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
+    wagyu: "",
     image: "",
   },
   {
@@ -46,13 +60,7 @@ const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
-    image: "",
-  },
-  {
-    itemName: "",
-    inStock: "",
-    price: "$",
-    vegetarian: "",
+    wagyu: "",
     image: "",
   },
 ];
