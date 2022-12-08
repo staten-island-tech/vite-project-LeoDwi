@@ -26,7 +26,8 @@ setupCounter(document.querySelector("#counter"));
 console.log(menu);
 
 menu.forEach((item) => {
-  insertAdjacentHTML(
+  console.log(menu);
+  document.querySelector("#parent menu").insertAdjacentHTML(
     "afterend",
     `
   <div class="menu card">
