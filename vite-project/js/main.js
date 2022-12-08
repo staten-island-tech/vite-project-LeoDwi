@@ -2,6 +2,7 @@ import "../styles/style.css";
 import "./array.js";
 import javascriptLogo from "../public/javascript.svg";
 import { setupCounter } from "./counter.js";
+import { menu } from "./array.js";
 
 document.querySelector("#app").innerHTML = `
   <div>
@@ -22,3 +23,14 @@ document.querySelector("#app").innerHTML = `
 `;
 
 setupCounter(document.querySelector("#counter"));
+console.log(menu);
+
+menu.forEach((item) => {
+  insertAdjacentHTML(
+    "afterend",
+    `
+  <div class="menu card">
+  <h2 class="food name">${menu.itemName}</h2>
+  </div>);`
+  );
+});
