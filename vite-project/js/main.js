@@ -3,6 +3,8 @@ import "./array.js";
 import javascriptLogo from "../public/javascript.svg";
 import { setupCounter } from "./counter.js";
 import { menu } from "./array.js";
+import { menuFilters } from "./Dom.js";
+console.log(menuFilters);
 
 document.querySelector("#app").innerHTML = `
   <div>

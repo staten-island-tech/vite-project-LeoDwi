@@ -28,7 +28,6 @@ export const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
-    wagyu: "",
     image: "",
   },
   {
@@ -36,7 +35,6 @@ export const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
-    wagyu: "",
     image: "",
   },
   {
@@ -44,7 +42,6 @@ export const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
-    wagyu: "",
     image: "",
   },
   {
@@ -52,7 +49,6 @@ export const menu = [
     inStock: "",
     price: "$",
     vegetarian: "",
-    wagyu: "",
     image: "",
   },
   {
