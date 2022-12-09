@@ -27,13 +27,15 @@ document.querySelector("#app").innerHTML = `
 setupCounter(document.querySelector("#counter"));
 console.log(menu);
 
-menu.forEach((item) => {
-  console.log(menu);
+function cardCreator() {
   document.querySelector("#parent menu").insertAdjacentHTML(
     "afterend",
     `
   <div class="menu card">
   <h2 class="food name">${menu.itemName}</h2>
-  </div>);`
+  <h2 class="price">${menu.price}</h2>
+  <
+  </div>);
+  `
   );
-});
+}
