@@ -32,9 +32,9 @@ function cardCreator() {
     "afterend",
     `
   <div class="menu card">
-  <h2 class="food name">${menu.itemName}</h2>
+  <h2 class="food-name">${menu.itemName}</h2>
   <h2 class="price">${menu.price}</h2>
-  <
+  <img class="food-visual" src="${menu.image}/>
   </div>);
   `
   );
