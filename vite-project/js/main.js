@@ -1,31 +1,7 @@
 import "../styles/style.css";
 import "./array.js";
-import javascriptLogo from "../public/javascript.svg";
-import { setupCounter } from "./counter.js";
 import { menu } from "./array.js";
-import { menuFilters } from "./Dom.js";
-console.log(menuFilters);
-
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
-
-setupCounter(document.querySelector("#counter"));
-console.log(menu);
+import { buttons, menuFilters } from "./Dom.js";
 
 function cardCreator() {
   document.querySelector("#parent menu").insertAdjacentHTML(
@@ -33,9 +9,43 @@ function cardCreator() {
     `
   <div class="menu card">
   <h2 class="food-name">${menu.itemName}</h2>
-  <h2 class="price">${menu.price}</h2>
+  <h2 class="price">${menu.price} usd</h2>
   <img class="food-visual" src="${menu.image}/>
   </div>);
   `
   );
 }
+
+console.log(menuFilters);
+
+function remove() {
+  document.querySelector("#parent menu").remove();
+}
+
+buttons.all.addEventListener("click", function (event) {
+  menu.forEach((item) => {
+    cardCreator();
+  });
+  event.preventDefault();
+});
+
+buttons.meat.addEventListener("click", function (event) {
+  menuFilters.meats.forEach((item) => {
+    cardCreator();
+  });
+  event.preventDefault();
+});
+
+buttons.vegetarian.addEventListener("click", function (event) {
+  menuFilters.vegetarian.forEach((item) => {
+    cardCreator();
+  });
+  event.preventDefault();
+});
+
+buttons.budget.addEventListener("click", function (event) {
+  menuFilters.budget.forEach((item) => {
+    cardCreator();
+  });
+  event.preventDefault();
+});
