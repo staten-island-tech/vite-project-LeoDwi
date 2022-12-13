@@ -4,11 +4,11 @@ import { menu } from "./array.js";
 import { buttons, menuFilters } from "./Dom.js";
 
 function cardCreator() {
-  document.querySelector("#parent menu").insertAdjacentHTML(
+  document.getElementById("#parent-menu").insertAdjacentHTML(
     "afterend",
     `
   <div class="menu card">
-  <h2 class="food-name">${menu.itemName}</h2>
+  <h2 class="food-name">${menu.item}</h2>
   <h2 class="price">${menu.price} usd</h2>
   <img class="food-visual" src="${menu.image}/>
   </div>);
@@ -30,7 +30,7 @@ buttons.all.addEventListener("click", function (event) {
 });
 
 buttons.meat.addEventListener("click", function (event) {
-  menuFilters.meats.forEach((item) => {
+  menuFilters.meat.forEach((item) => {
     cardCreator();
   });
   event.preventDefault();
