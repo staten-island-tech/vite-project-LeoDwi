@@ -29,6 +29,7 @@ function remove() {
 
 buttons.all.addEventListener("click", function (event) {
   menu.forEach((item) => {
+    target.remove();
     cardCreator();
   });
   event.preventDefault();
