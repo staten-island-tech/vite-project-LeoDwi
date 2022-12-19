@@ -13,3 +13,12 @@ export const buttons = {
   vegetarian: document.getElementById("vegetarian"),
   budget: document.getElementById("budget"),
 };
+
+export const DOMSelectors = {
+  parent: document.getElementById("parent-menu"),
+  html: `<div class="menu-card">
+  <h2 class="food-name">${card.name}</h2>
+  <h2 class="price">${card.price} usd</h2>
+  <img class="food-visual" src="${card.link}/>
+  </div>`,
+};

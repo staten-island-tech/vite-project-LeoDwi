@@ -7,20 +7,21 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="background-image">
-      <img
-        src="https://di-uploads-pod11.dealerinspire.com/volkswagenofstreetsboro/uploads/2021/10/Chinese-Food-on-a-Plate-1024x445.jpg"
-        alt=""
-        class="img"
-      />
-    </div>
     <div class="buttons">
-      <button class="whole" id="whole">Complete Menu</button>
-      <button class="meat" id="meat">Meats Only</button>
-      <button class="vegetarian" id="meat">Vegetarian</button>
-      <button class="budget" id="budget">Value Items</button>
+      <button class="whole" class="button" id="whole">Complete Menu</button>
+      <button class="meat" class="button" id="meat">Meats Only</button>
+      <button class="vegetarian" class="button" id="vegetarian">
+        Vegetarian
+      </button>
+      <button class="budget" class="button" id="budget">Value Items</button>
     </div>
-    <div class="parent-menu" id="parent-menu"></div>
+    <div class="parent-menu" id="parent-menu">
+      <div class="menu-card">
+        <h2 class="food-name"></h2>
+        <h2 class="price"></h2>
+        <img class="food-visual" src="" />
+      </div>
+    </div>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

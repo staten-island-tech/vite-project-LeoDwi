@@ -21,5 +21,27 @@ body,
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  font-size: 30px;
+  width: 100rem;
+  padding: 20px 20px;
+  margin: 30px auto;
+}
+
+.parent-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.menu-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 30px 30px;
+  margin: 10px 20px;
+  width: 20vw;
 }
