@@ -7,20 +7,23 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="buttons">
-      <button class="whole" class="button" id="whole">Complete Menu</button>
-      <button class="meat" class="button" id="meat">Meats Only</button>
-      <button class="vegetarian" class="button" id="vegetarian">
-        Vegetarian
-      </button>
-      <button class="budget" class="button" id="budget">Value Items</button>
-    </div>
-    <div class="parent-menu" id="parent-menu">
-      <div class="menu-card">
-        <h2 class="food-name"></h2>
-        <h2 class="price"></h2>
-        <img class="food-visual" src="" />
+    <section>
+      <div class="theme">
+        <button class="theme-button">Change theme</button>
       </div>
+    </section>
+    <section>
+      <div class="buttons">
+        <button class="whole" class="button" id="whole">Complete Menu</button>
+        <button class="meat" class="button" id="meat">Meats Only</button>
+        <button class="vegetarian" class="button" id="vegetarian">
+          Vegetarian
+        </button>
+        <button class="budget" class="button" id="budget">Value Items</button>
+      </div>
+    </section>
+    <div class="parent-menu" id="parent-menu">
+      <div class="menu-card" id="child"></div>
     </div>
     <script type="module" src="./js/main.js"></script>
   </body>

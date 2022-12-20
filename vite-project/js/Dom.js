@@ -15,13 +15,14 @@ export const buttons = {
 };
 
 export const card = {
-  name: item.item,
-  price: item.price,
-  link: item.image,
+  name: menu.item,
+  price: menu.price,
+  link: menu.image,
 };
 
 export const DOMSelectors = {
   parent: document.getElementById("parent-menu"),
+  child: document.getElementById("child"),
   html: `<div class="menu-card">
   <h2 class="food-name">${card.name}</h2>
   <h2 class="price">${card.price} usd</h2>

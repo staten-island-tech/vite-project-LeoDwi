@@ -3,18 +3,20 @@ import "./array.js";
 import { menu } from "./array.js";
 import { buttons, DOMSelectors, menuFilters, card } from "./Dom.js";
 
-function startUp() {
+function startUp(item) {
   DOMSelectors.parent.insertAdjacentHTML(
     "afterend",
     `
   <div class="menu-card">
-  <h2 class="food-name">${menu.item}</h2>
-  <h2 class="price">${menu.price} usd</h2>
-  <img class="food-visual" src="${menu.image}/>
+  <h2 class="food-name">${item.item}</h2>
+  <h2 class="price">${item.price} usd</h2>
+  <img class="food-visual" src="${item.image}/>
   </div>);
   `
   );
 }
+
+console.log(menu.item);
 
 function cardCreator(menuFilters) {
   /*   const card = {
@@ -23,7 +25,7 @@ function cardCreator(menuFilters) {
     link: menu.image,
   }; */
 
-  DOMSelectors.parent.innerHTML = DOMSelectors.html;
+  DOMSelectors.child.innerHTML = DOMSelectors.html;
 
   /*   DOMSelectors.parent.innerHTML(
     `
@@ -38,21 +40,15 @@ function cardCreator(menuFilters) {
 
 console.log(menuFilters);
 
-function remove() {
-  document.querySelector("#parent menu").remove();
-}
-
 menu.forEach((item) => {
-  startUp();
-});
-
-const yeee = ["hello", "yes"];
-
-yeee.forEach((element) => {
-  DOMSelectors.parent.insertAdjacentHTML(
+  DOMSelectors.child.insertAdjacentHTML(
     "afterend",
-
-    `<h1 class="hello">${element}</h1>;`
+    `
+  <div class="menu-card">
+  <h2 class="food-name">${item.item}</h2>
+  <h2 class="price">${item.price} usd</h2>
+  <img class="food-visual" src="${item.image}"/>
+  </div>`
   );
 });
 
