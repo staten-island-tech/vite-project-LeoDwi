@@ -16,8 +16,6 @@ function startUp(item) {
   );
 }
 
-console.log(menu.item);
-
 function cardCreator(menuFilters) {
   const card = {
     name: menu.item,
@@ -58,9 +56,13 @@ buttons.theme.addEventListener("click", function () {
   if (document.body.classList.contains("light")) {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
+    document.querySelectorAll(".menu-card").classList.add("dark");
+    document.querySelectorAll(".menu-card").classList.remove("light");
   } else {
     document.body.classList.add("light");
     document.body.classList.remove("dark");
+    document.querySelectorAll(".menu-card").classList.add("light");
+    document.querySelectorAll(".menu-card").classList.remove("dark");
   }
 });
 
@@ -68,7 +70,7 @@ buttons.all.addEventListener("click", function (event) {
   removeCards();
   menu.forEach((item) => {
     // cardCreator();
-    document.querySelector(".parent-menu").insertAdjacentHTML(
+    document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
     <div class="menu-card">
@@ -83,8 +85,8 @@ buttons.all.addEventListener("click", function (event) {
 
 buttons.meat.addEventListener("click", function (event) {
   removeCards();
-  menuFilters.meat.forEach((item) => {
-    document.querySelector(".parent-menu").insertAdjacentHTML(
+  menuFilters.meats.forEach((item) => {
+    document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
     <div class="menu-card">
@@ -100,7 +102,7 @@ buttons.meat.addEventListener("click", function (event) {
 buttons.vegetarian.addEventListener("click", function (event) {
   removeCards();
   menuFilters.vegetarian.forEach((item) => {
-    document.querySelector(".parent-menu").insertAdjacentHTML(
+    document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
     <div class="menu-card">
@@ -116,7 +118,7 @@ buttons.vegetarian.addEventListener("click", function (event) {
 buttons.budget.addEventListener("click", function (event) {
   removeCards();
   menuFilters.budget.forEach((item) => {
-    document.querySelector(".menu-card").insertAdjacentHTML(
+    document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
     <div class="menu-card">

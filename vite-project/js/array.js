@@ -70,7 +70,7 @@ export const menu = [
     image:
       "https://omnivorescookbook.com/wp-content/uploads/2019/06/1403_Stir-Fried-Water-Spinach_003.jpg",
   },
-  {
+  /*   {
     item: "e",
     inStock: "e",
     price: "1",
@@ -83,5 +83,5 @@ export const menu = [
     price: "1",
     type: ["e"],
     image: "e",
-  },
+  }, */
 ];
