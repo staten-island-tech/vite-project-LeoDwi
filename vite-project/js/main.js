@@ -19,15 +19,13 @@ function startUp(item) {
 console.log(menu.item);
 
 function cardCreator(menuFilters) {
-  /*   const card = {
+  const card = {
     name: menu.item,
     price: menu.price,
     link: menu.image,
-  }; */
+  };
 
-  DOMSelectors.child.innerHTML = DOMSelectors.html;
-
-  /*   DOMSelectors.parent.innerHTML(
+  DOMSelectors.parent.insertAdjacentHTML(
     `
   <div class="menu-card">
   <h2 class="food-name">${card.name}</h2>
@@ -35,7 +33,11 @@ function cardCreator(menuFilters) {
   <img class="food-visual" src="${card.link}/>
   </div>);
   `
-  ); */
+  );
+}
+
+function removeCards() {
+  DOMSelectors.parent.innerHTML = DOMSelectors.clear;
 }
 
 console.log(menuFilters);
@@ -52,30 +54,77 @@ menu.forEach((item) => {
   );
 });
 
+buttons.theme.addEventListener("click", function () {
+  if (document.body.classList.contains("light")) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+  } else {
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+  }
+});
+
 buttons.all.addEventListener("click", function (event) {
+  removeCards();
   menu.forEach((item) => {
-    cardCreator();
+    // cardCreator();
+    document.querySelector(".parent-menu").insertAdjacentHTML(
+      "afterend",
+      `
+    <div class="menu-card">
+    <h2 class="food-name">${item.item}</h2>
+    <h2 class="price">${item.price} usd</h2>
+    <img class="food-visual" src="${item.image}"/>
+    </div>`
+    );
   });
   event.preventDefault();
 });
 
 buttons.meat.addEventListener("click", function (event) {
+  removeCards();
   menuFilters.meat.forEach((item) => {
-    cardCreator();
+    document.querySelector(".parent-menu").insertAdjacentHTML(
+      "afterend",
+      `
+    <div class="menu-card">
+    <h2 class="food-name">${item.item}</h2>
+    <h2 class="price">${item.price} usd</h2>
+    <img class="food-visual" src="${item.image}"/>
+    </div>`
+    );
   });
   event.preventDefault();
 });
 
 buttons.vegetarian.addEventListener("click", function (event) {
+  removeCards();
   menuFilters.vegetarian.forEach((item) => {
-    cardCreator();
+    document.querySelector(".parent-menu").insertAdjacentHTML(
+      "afterend",
+      `
+    <div class="menu-card">
+    <h2 class="food-name">${item.item}</h2>
+    <h2 class="price">${item.price} usd</h2>
+    <img class="food-visual" src="${item.image}"/>
+    </div>`
+    );
   });
   event.preventDefault();
 });
 
 buttons.budget.addEventListener("click", function (event) {
+  removeCards();
   menuFilters.budget.forEach((item) => {
-    cardCreator();
+    document.querySelector(".menu-card").insertAdjacentHTML(
+      "afterend",
+      `
+    <div class="menu-card">
+    <h2 class="food-name">${item.item}</h2>
+    <h2 class="price">${item.price} usd</h2>
+    <img class="food-visual" src="${item.image}"/>
+    </div>`
+    );
   });
   event.preventDefault();
 });

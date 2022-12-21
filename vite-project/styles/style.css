@@ -7,10 +7,14 @@ body,
   font-size: 62.5%;
 }
 
-/* .background-image {
-  display: flex;
-  flex-wrap: nowrap;
-} */
+:root {
+  --gray: #20272b;
+  --light-gray: #3f414c;
+}
+
+.header {
+  font-size: 7.5rem;
+}
 
 .img {
   height: 65vh;
@@ -22,6 +26,17 @@ body,
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 30px;
+  width: 100rem;
+  padding: 20px 20px;
+  margin: 30px auto;
+}
+
+.theme {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
   font-size: 30px;
   width: 100rem;
   padding: 20px 20px;
@@ -48,4 +63,10 @@ body,
 
 .food-visual {
   width: 20vw;
+}
+
+.light {
+}
+
+.dark {
 }

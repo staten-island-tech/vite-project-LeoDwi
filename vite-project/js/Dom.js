@@ -8,6 +8,7 @@ export const menuFilters = {
 };
 
 export const buttons = {
+  theme: document.querySelector(".theme-button"),
   all: document.getElementById("whole"),
   meat: document.getElementById("meat"),
   vegetarian: document.getElementById("vegetarian"),
@@ -26,6 +27,12 @@ export const DOMSelectors = {
   html: `<div class="menu-card">
   <h2 class="food-name">${card.name}</h2>
   <h2 class="price">${card.price} usd</h2>
-  <img class="food-visual" src="${card.link}/>
+  <img class="food-visual" src="${card.link}"/>
+  </div>`,
+  clear: `<div class="menu-card">
+  <div class="child" id="child"></div>
+  <h2 class="food-name"></h2>
+  <h2 class="price"></h2>
+  <img class="food-visual" src=""/>
   </div>`,
 };
