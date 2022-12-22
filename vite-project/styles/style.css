@@ -59,12 +59,16 @@ body,
   margin: 30px auto;
 }
 
-.parent-menu,
-.menu {
+.menu,
+.child {
+  position: absolute;
+}
+
+.parent-menu {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .menu-card {
@@ -79,6 +83,7 @@ body,
   margin: 10px 20px;
   width: 25vw;
   background-color: white;
+  border: black solid 3px;
 }
 
 .food-visual {
@@ -89,9 +94,11 @@ body,
 }
 
 .light {
-  --primary: var(--pastel-blue);
+  --primary: var(--pastel-pink);
 }
 
 .dark {
-  --primary: var(--pastel-pink);
+  --primary: var(--pastel-blue);
 }
+
+.buttons
