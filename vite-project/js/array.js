@@ -36,7 +36,8 @@ export const menu = [
     inStock: "True",
     price: "1.99",
     type: ["meat", "steamed"],
-    image: "e",
+    image:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190503-delish-pineapple-baked-salmon-horizontal-ehg-450-1557771120.jpg?crop=0.669xw:1.00xh;0.173xw,0&resize=640:*",
   },
   {
     item: "Peanut Butter Noodles",

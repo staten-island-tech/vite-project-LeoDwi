@@ -24,15 +24,7 @@ export const card = {
 export const DOMSelectors = {
   parent: document.getElementById("parent-menu"),
   child: document.getElementById("child"),
-  html: `<div class="menu">
-  <h2 class="food-name">${card.name}</h2>
-  <h2 class="price">${card.price} usd</h2>
-  <img class="food-visual" src="${card.link}"/>
-  </div>`,
-  clear: `<div class="menu">
+  clear: `
   <div class="child" id="child"></div>
-  <h2 class="food-name"></h2>
-  <h2 class="price"></h2>
-  <img class="food-visual" src=""/>
-  </div>`,
+  `,
 };

@@ -7,7 +7,7 @@ function startUp(item) {
   DOMSelectors.parent.insertAdjacentHTML(
     "afterend",
     `
-  <div class="menu-card">
+  <div class="light" id="menu-card">
   <h2 class="food-name">${item.item}</h2>
   <h2 class="price">${item.price} usd</h2>
   <img class="food-visual" src="${item.image}/>
@@ -17,18 +17,12 @@ function startUp(item) {
 }
 
 function cardCreator(menuFilters) {
-  const card = {
-    name: menu.item,
-    price: menu.price,
-    link: menu.image,
-  };
-
-  DOMSelectors.parent.insertAdjacentHTML(
+  document.querySelector(".child").insertAdjacentHTML(
     `
-  <div class="menu-card">
-  <h2 class="food-name">${card.name}</h2>
-  <h2 class="price">${card.price} usd</h2>
-  <img class="food-visual" src="${card.link}/>
+  <div class="light" id="menu-card">
+  <h2 class="food-name">${item.item}</h2>
+  <h2 class="price">${item.price} usd</h2>
+  <img class="food-visual" src="${item.image}/>
   </div>);
   `
   );
@@ -44,7 +38,7 @@ menu.forEach((item) => {
   DOMSelectors.child.insertAdjacentHTML(
     "afterend",
     `
-  <div class="menu-card">
+  <div class="light menu-card">
   <h2 class="food-name">${item.item}</h2>
   <h2 class="price">${item.price} usd</h2>
   <img class="food-visual" src="${item.image}"/>
@@ -56,13 +50,9 @@ buttons.theme.addEventListener("click", function () {
   if (document.body.classList.contains("light")) {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
-    document.querySelectorAll(".menu-card").classList.add("dark");
-    document.querySelectorAll(".menu-card").classList.remove("light");
   } else {
     document.body.classList.add("light");
     document.body.classList.remove("dark");
-    document.querySelectorAll(".menu-card").classList.add("light");
-    document.querySelectorAll(".menu-card").classList.remove("dark");
   }
 });
 
@@ -73,7 +63,7 @@ buttons.all.addEventListener("click", function (event) {
     document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
-    <div class="menu-card">
+    <div class="light menu-card">
     <h2 class="food-name">${item.item}</h2>
     <h2 class="price">${item.price} usd</h2>
     <img class="food-visual" src="${item.image}"/>
@@ -89,7 +79,7 @@ buttons.meat.addEventListener("click", function (event) {
     document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
-    <div class="menu-card">
+    <div class="light menu-card">
     <h2 class="food-name">${item.item}</h2>
     <h2 class="price">${item.price} usd</h2>
     <img class="food-visual" src="${item.image}"/>
@@ -105,7 +95,7 @@ buttons.vegetarian.addEventListener("click", function (event) {
     document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
-    <div class="menu-card">
+    <div class="light menu-card">
     <h2 class="food-name">${item.item}</h2>
     <h2 class="price">${item.price} usd</h2>
     <img class="food-visual" src="${item.image}"/>
@@ -121,7 +111,7 @@ buttons.budget.addEventListener("click", function (event) {
     document.querySelector(".child").insertAdjacentHTML(
       "afterend",
       `
-    <div class="menu-card">
+    <div class="light menu-card">
     <h2 class="food-name">${item.item}</h2>
     <h2 class="price">${item.price} usd</h2>
     <img class="food-visual" src="${item.image}"/>

@@ -8,9 +8,21 @@ body,
 }
 
 :root {
-  --gray: #20272b;
-  --light-gray: #3f414c;
-  --white: #efff;
+  --pastel-pink: #f8c8dc;
+  --pastel-blue: #a7c7e7;
+
+  /* defaults */
+
+  --primary: var(--pastel-blue);
+}
+
+.body {
+  background-color: var(--primary);
+}
+
+.header,
+.menu-card {
+  background-color: var(--secondary);
 }
 
 .header {
@@ -52,7 +64,7 @@ body,
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .menu-card {
@@ -60,19 +72,26 @@ body,
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  font-size: 20px;
-  padding: 30px 20px;
+  text-align: center;
+  align-items: center;
+  font-size: 50px;
+  padding: 30px 30px;
   margin: 10px 20px;
   width: 25vw;
-  background-color: azure;
+  background-color: white;
 }
 
 .food-visual {
+  float: left;
   width: 20vw;
+  height: 20vw;
+  object-fit: cover;
 }
 
 .light {
+  --primary: var(--pastel-blue);
 }
 
 .dark {
+  --primary: var(--pastel-pink);
 }
