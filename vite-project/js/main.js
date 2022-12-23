@@ -24,9 +24,7 @@ function removeCards() {
 
 console.log(menuFilters);
 
-menu.forEach((item) => {
-  cardCreator(menu);
-});
+cardCreator(menu);
 
 buttons.theme.addEventListener("click", function () {
   if (document.body.classList.contains("light")) {

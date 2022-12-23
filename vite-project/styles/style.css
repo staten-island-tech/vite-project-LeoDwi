@@ -59,11 +59,6 @@ body,
   margin: 30px auto;
 }
 
-.menu,
-.child {
-  position: absolute;
-}
-
 .parent-menu {
   display: flex;
   flex-wrap: wrap;

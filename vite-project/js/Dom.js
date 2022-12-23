@@ -17,7 +17,5 @@ export const buttons = {
 
 export const DOMSelectors = {
   parent: document.getElementById("parent-menu"),
-  clear: `
-  <div class="child" id="child"></div>
-  `,
+  clear: ``,
 };
