@@ -15,15 +15,8 @@ export const buttons = {
   budget: document.getElementById("budget"),
 };
 
-export const card = {
-  name: menu.item,
-  price: menu.price,
-  link: menu.image,
-};
-
 export const DOMSelectors = {
   parent: document.getElementById("parent-menu"),
-  child: document.getElementById("child"),
   clear: `
   <div class="child" id="child"></div>
   `,

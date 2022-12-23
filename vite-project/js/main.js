@@ -1,31 +1,21 @@
 import "../styles/style.css";
 import "./array.js";
 import { menu } from "./array.js";
-import { buttons, DOMSelectors, menuFilters, card } from "./Dom.js";
+import { buttons, DOMSelectors, menuFilters } from "./Dom.js";
 
-function startUp(item) {
-  DOMSelectors.parent.insertAdjacentHTML(
-    "afterend",
+function cardCreator(x) {
+  x.forEach((item) => {
+    DOMSelectors.parent.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="menu-card">
+      <h2 class="food-name">${item.item}</h2>
+      <h2 class="price">${item.price} usd</h2>
+      <img class="food-visual" src="${item.image}"/>
+      </div>
     `
-  <div class="light" id="menu-card">
-  <h2 class="food-name">${item.item}</h2>
-  <h2 class="price">${item.price} usd</h2>
-  <img class="food-visual" src="${item.image}/>
-  </div>);
-  `
-  );
-}
-
-function cardCreator(menuFilters) {
-  document.querySelector(".child").insertAdjacentHTML(
-    `
-  <div class="light" id="menu-card">
-  <h2 class="food-name">${item.item}</h2>
-  <h2 class="price">${item.price} usd</h2>
-  <img class="food-visual" src="${item.image}/>
-  </div>);
-  `
-  );
+    );
+  });
 }
 
 function removeCards() {
@@ -35,15 +25,7 @@ function removeCards() {
 console.log(menuFilters);
 
 menu.forEach((item) => {
-  DOMSelectors.child.insertAdjacentHTML(
-    "afterend",
-    `
-  <div class="light menu-card">
-  <h2 class="food-name">${item.item}</h2>
-  <h2 class="price">${item.price} usd</h2>
-  <img class="food-visual" src="${item.image}"/>
-  </div>`
-  );
+  cardCreator(menu);
 });
 
 buttons.theme.addEventListener("click", function () {
@@ -58,65 +40,24 @@ buttons.theme.addEventListener("click", function () {
 
 buttons.all.addEventListener("click", function (event) {
   removeCards();
-  menu.forEach((item) => {
-    // cardCreator();
-    document.querySelector(".child").insertAdjacentHTML(
-      "afterend",
-      `
-    <div class="light menu-card">
-    <h2 class="food-name">${item.item}</h2>
-    <h2 class="price">${item.price} usd</h2>
-    <img class="food-visual" src="${item.image}"/>
-    </div>`
-    );
-  });
+  cardCreator(menuFilters.allProducts);
   event.preventDefault();
 });
 
 buttons.meat.addEventListener("click", function (event) {
   removeCards();
-  menuFilters.meats.forEach((item) => {
-    document.querySelector(".child").insertAdjacentHTML(
-      "afterend",
-      `
-    <div class="light menu-card">
-    <h2 class="food-name">${item.item}</h2>
-    <h2 class="price">${item.price} usd</h2>
-    <img class="food-visual" src="${item.image}"/>
-    </div>`
-    );
-  });
+  cardCreator(menuFilters.meats);
   event.preventDefault();
 });
 
 buttons.vegetarian.addEventListener("click", function (event) {
   removeCards();
-  menuFilters.vegetarian.forEach((item) => {
-    document.querySelector(".child").insertAdjacentHTML(
-      "afterend",
-      `
-    <div class="light menu-card">
-    <h2 class="food-name">${item.item}</h2>
-    <h2 class="price">${item.price} usd</h2>
-    <img class="food-visual" src="${item.image}"/>
-    </div>`
-    );
-  });
+  cardCreator(menuFilters.vegetarian);
   event.preventDefault();
 });
 
 buttons.budget.addEventListener("click", function (event) {
   removeCards();
-  menuFilters.budget.forEach((item) => {
-    document.querySelector(".child").insertAdjacentHTML(
-      "afterend",
-      `
-    <div class="light menu-card">
-    <h2 class="food-name">${item.item}</h2>
-    <h2 class="price">${item.price} usd</h2>
-    <img class="food-visual" src="${item.image}"/>
-    </div>`
-    );
-  });
+  cardCreator(menuFilters.budget);
   event.preventDefault();
 });
