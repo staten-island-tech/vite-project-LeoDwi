@@ -11,7 +11,7 @@ function cardCreator(x) {
       <div class="menu-card">
       <h2 class="food-name">${item.item}</h2>
       <h2 class="price">${item.price} usd</h2>
-      <img class="food-visual" src="${item.image}"/>
+      <img class="food-visual" src="${item.image}" alt="food visual."/>
       </div>
     `
     );
