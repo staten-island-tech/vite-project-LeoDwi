@@ -10,10 +10,13 @@ body,
 :root {
   --pastel-pink: #f8c8dc;
   --pastel-blue: #a7c7e7;
+  --pink: #faadb9;
+  --blue: rgb(46, 171, 244);
 
   /* defaults */
 
   --primary: var(--pastel-blue);
+  --secondary: var(--pink);
 }
 
 .body {
@@ -97,7 +100,7 @@ body,
   padding: 30px 30px;
   margin: 10px 20px;
   width: 25vw;
-  background-color: white;
+  background-color: var(--secondary);
   border: black solid 3px;
 }
 
@@ -110,8 +113,10 @@ body,
 
 .light {
   --primary: var(--pastel-pink);
+  --secondary: var(--pink);
 }
 
 .dark {
   --primary: var(--pastel-blue);
+  --secondary: var(--blue);
 }

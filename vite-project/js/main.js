@@ -23,6 +23,9 @@ function removeCards() {
 }
 
 console.log(menuFilters);
+const hello = document.getElementById(`parent-menu`);
+console.log(hello.classList);
+console.log(document.getElementsByClassName("menu-card").classList);
 
 cardCreator(menu);
 
@@ -30,9 +33,13 @@ buttons.theme.addEventListener("click", function () {
   if (document.body.classList.contains("light")) {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
+    hello.classList.remove("light");
+    hello.classList.add("dark");
   } else {
     document.body.classList.add("light");
     document.body.classList.remove("dark");
+    hello.classList.remove("dark");
+    hello.classList.add("light");
   }
 });
 
