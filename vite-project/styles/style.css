@@ -8,6 +8,8 @@ body,
 }
 
 :root {
+  /* variables */
+
   --pastel-pink: #f8c8dc;
   --pastel-blue: #a7c7e7;
   --pink: #faadb9;
