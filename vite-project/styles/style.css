@@ -10,15 +10,18 @@ body,
 :root {
   /* variables */
 
-  --pastel-pink: #f8c8dc;
-  --pastel-blue: #a7c7e7;
-  --pink: #faadb9;
-  --blue: rgb(46, 171, 244);
+  --lightgray: #dfdcdd;
+  --gray: #262626;
+  --white: #ffffff;
+  --black: rgb(0, 0, 0);
+  --aliceblue: #f0f8ff;
+  --darkgray: #1b1a1a;
 
   /* defaults */
 
-  --primary: var(--pastel-blue);
+  --primary: var(--pastel-pink);
   --secondary: var(--pink);
+  --tertiary: var(var(--aliceblue));
 }
 
 .body {
@@ -30,11 +33,21 @@ body,
   background-color: var(--secondary);
 }
 
+.menu-header,
 .header {
   font-size: 7.5rem;
-  margin: 20px auto;
+  margin: 40px auto;
   padding: 20px 100px;
   text-align: center;
+  font-family: "Bangers", cursive;
+}
+
+.description {
+  font-size: 4.5rem;
+  margin: 100px auto;
+  padding: 20px 100px;
+  text-align: center;
+  font-family: "East Sea Dokdo", cursive;
 }
 
 .img {
@@ -54,8 +67,9 @@ body,
   width: 25vw;
   padding: 20px 20px;
   margin: 30px 0px;
-  background-color: aliceblue;
+  background-color: ;
   border: 1px black solid;
+  background-color: var(--tertiary);
 }
 
 .button:hover {
@@ -77,6 +91,12 @@ body,
   padding: 20px 20px;
   margin: 30px 0px;
   border: 1px black solid;
+}
+
+.button,
+.theme-button {
+  background-color: var(--tertiary);
+  font-family: "Caveat", cursive;
 }
 
 .theme-button:hover {
@@ -103,6 +123,12 @@ body,
   margin: 10px 20px;
   width: 25vw;
   border: black solid 3px;
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
+}
+
+.menu-card:hover {
+  transform: scale(105%);
 }
 
 .food-visual {
@@ -113,11 +139,14 @@ body,
 }
 
 .light {
-  --primary: var(--pastel-pink);
-  --secondary: var(--pink);
+  --primary: var(--lightgray);
+  --secondary: var(--white);
+  --tertiary: var(--aliceblue);
 }
 
 .dark {
-  --primary: var(--pastel-blue);
-  --secondary: var(--blue);
+  --primary: var(--black);
+  --secondary: var(--gray);
+  --tertiary: var(--darkgray);
+  color: white;
 }
