@@ -16,6 +16,7 @@ function cardCreator(x) {
       <h2 class="food-name">${item.item}</h2>
       <h2 class="price">${item.price} usd</h2>
       <img class="food-visual" src="${item.image}" alt="food visual."/>
+      <p class="stock">In Stock: ${item.inStock}</p>
       </div>
     `
     );
