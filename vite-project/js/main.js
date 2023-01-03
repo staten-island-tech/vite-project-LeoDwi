@@ -3,8 +3,7 @@ import "./array.js";
 import { menu } from "./array.js";
 import { buttons, DOMSelectors, menuFilters } from "./Dom.js";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 function cardCreator(x) {
