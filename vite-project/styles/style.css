@@ -19,8 +19,8 @@ body,
 
   /* defaults */
 
-  --primary: var(--pastel-pink);
-  --secondary: var(--pink);
+  --primary: var(--lightgray);
+  --secondary: var(--white);
   --tertiary: var(var(--aliceblue));
 }
 
